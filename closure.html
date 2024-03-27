@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="demo">0</h1>
+    <button onclick="incrementCounter()">Click</button>
+    <button onclick="randomBtn()">Randomly</button>
+    <script>
+        //closure: 
+        
+
+        const incrementCounter = (function(){
+            let counter = 0 //local variable
+        
+            return function(){
+                counter++
+                document.querySelector("#demo").innerHTML =  counter
+                
+            }
+        })() //self call  function
+
+       // (function(){})() //closures
+       
+        
+       
+        function randomBtn(){
+            counter++;
+            document.querySelector("#demo").innerHTML = counter
+        }
+        
+    </script>
+</body>
+</html>
